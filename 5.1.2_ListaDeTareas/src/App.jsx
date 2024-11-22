@@ -1,14 +1,16 @@
 import './App.css'
 import ListaDeTareasComponent from './components/ListaDeTareasComponent.jsx'
+import CabeceraListaTareasComponent from './components/CabeceraListaTareasComponent.jsx'
 
 function App() {
 
   return (
     <>
-      <ListaDeTareasComponent titulo='Trabajo' descripcion='Aquí vienen las tareas del trabajo' />
+      <ListaDeTareasComponent titulo='Trabajo' />
       <ListaDeTareasComponent titulo='Hogar' />
       <ListaDeTareasComponent titulo='Escuela' />
-      <ListaDeTareasComponent titulo='Mascotas' />
+      <ListaDeTareasComponent />
+      <CabeceraListaTareasComponent />
     </>
   )
 }
