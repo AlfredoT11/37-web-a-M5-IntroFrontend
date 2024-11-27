@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import ListaDesordenadaComponent from "./ListaDesordenadaComponent";
 import CabeceraListaTareasComponent from "./CabeceraListaTareasComponent";
 
@@ -19,11 +21,31 @@ function ListaDeTareasComponent({ titulo='Lista de tareas' }) {
     let {edad, apellido, nombre} = persona;   
     */ 
 
+    // useState() nos permite crear una variable de estado.
+    // useState() nos regresa un arreglo. El primer elemento del arreglo es la variable de estado.
+    // El segundo elemento del arreglo es la función que nos permitirá modificar la variable de estado.
+    // NO PODEMOS modificar una variable de estado con el operador de asignación (=)
+    let [contador, setContador] = useState(0);
+
+    function modificarContador(e){
+        setContador(contador + 1);
+    }
+
+    function completarTarea(){
+        alert('¡Tarea completada!');
+    }
+
     // 2. Agregar el return con lo que queremos ver en pantalla
     return (
         <>
             <CabeceraListaTareasComponent titulo={titulo} />
-            <ListaDesordenadaComponent />
+            <ListaDesordenadaComponent accionElementoLi={completarTarea} />
+            
+            {/* 
+            <h1>Contador: {contador}</h1>
+            <button onClick={modificarContador} >Sumar a contador</button>
+            */}
+            {/*<button onClick={() => {setContador(contador + 1)}} >Sumar a contador</button>*/}
         </>
     );
 }
