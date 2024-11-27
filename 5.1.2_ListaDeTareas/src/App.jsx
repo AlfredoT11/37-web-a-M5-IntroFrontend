@@ -1,6 +1,5 @@
 import './App.css'
 import ListaDeTareasComponent from './components/ListaDeTareasComponent.jsx'
-import CabeceraListaTareasComponent from './components/CabeceraListaTareasComponent.jsx'
 
 function App() {
 
@@ -10,7 +9,6 @@ function App() {
       <ListaDeTareasComponent titulo='Hogar' />
       <ListaDeTareasComponent titulo='Escuela' />
       <ListaDeTareasComponent />
-      <CabeceraListaTareasComponent />
     </>
   )
 }
