@@ -1,8 +1,9 @@
 export default function ElementoliComponent(
     { 
+        textoTarea,
         accionBoton=() => {console.log(`Botón presionado`)} 
     }
 ){
 
-    return <li>Tarea pendiente <button onClick={accionBoton}>Completar</button></li>;
+    return <li>{textoTarea} <button onClick={accionBoton}>Completar</button></li>;
 }

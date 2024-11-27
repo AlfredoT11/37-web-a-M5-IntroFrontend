@@ -26,6 +26,7 @@ function ListaDeTareasComponent({ titulo='Lista de tareas' }) {
     // El segundo elemento del arreglo es la función que nos permitirá modificar la variable de estado.
     // NO PODEMOS modificar una variable de estado con el operador de asignación (=)
     let [contador, setContador] = useState(0);
+    let [tareas, setTareas] = useState(['Lavar ropa', 'Limpiar cajas de arena', 'Cocinar']);
 
     function modificarContador(e){
         setContador(contador + 1);
@@ -39,7 +40,7 @@ function ListaDeTareasComponent({ titulo='Lista de tareas' }) {
     return (
         <>
             <CabeceraListaTareasComponent titulo={titulo} />
-            <ListaDesordenadaComponent accionElementoLi={completarTarea} />
+            <ListaDesordenadaComponent accionElementoLi={completarTarea} tareas={tareas} />
             
             {/* 
             <h1>Contador: {contador}</h1>
