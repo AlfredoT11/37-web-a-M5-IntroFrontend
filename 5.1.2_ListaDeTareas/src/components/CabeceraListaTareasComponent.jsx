@@ -1,10 +1,14 @@
-function CabeceraListaTareasComponent({ titulo='Titulo provisional' }) {
+import { useState } from "react";
+
+function CabeceraListaTareasComponent({ titulo='Titulo provisional', eventoAgregarTarea}) {
+
+    let [entradaTexto, setEntradaTexto] = useState('Escribe aquí tu tarea');
 
     return (
         <>
             <h1>{titulo}</h1>
-            <label>Tarea: </label><input type='text' />
-            <button onClick={agregarTarea}>Agregar tarea</button>
+            <label>Tarea: </label><input type='text' value={entradaTexto} onChange={(event) => {setEntradaTexto(event.target.value)}} />
+            <button onClick={() => {eventoAgregarTarea(entradaTexto)}}>Agregar tarea</button>
         </>
     );
 }

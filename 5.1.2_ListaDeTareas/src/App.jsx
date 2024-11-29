@@ -8,6 +8,8 @@ function App() {
       <ListaDeTareasComponent titulo='Trabajo' ejecutarContador={false} />
       <ListaDeTareasComponent titulo='Hogar' />
       <ListaDeTareasComponent titulo='Escuela' />
+      <ListaDeTareasComponent titulo='Escuela de música' />
+
       <ListaDeTareasComponent />
     </>
   )
