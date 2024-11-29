@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <ListaDeTareasComponent titulo='Trabajo' />
+      <ListaDeTareasComponent titulo='Trabajo' ejecutarContador={false} />
       <ListaDeTareasComponent titulo='Hogar' />
       <ListaDeTareasComponent titulo='Escuela' />
       <ListaDeTareasComponent />

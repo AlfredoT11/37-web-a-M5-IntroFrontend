@@ -4,7 +4,7 @@ import ListaDesordenadaComponent from "./ListaDesordenadaComponent";
 import CabeceraListaTareasComponent from "./CabeceraListaTareasComponent";
 
 // 1. Crear la función del componente.
-function ListaDeTareasComponent({ titulo='Lista de tareas' }) {
+function ListaDeTareasComponent({ titulo='Lista de tareas', ejecutarContador=true }) {
 
     /*
     Recordatorio de la destructuración.
@@ -32,8 +32,10 @@ function ListaDeTareasComponent({ titulo='Lista de tareas' }) {
         setContador(contador + 1);
     }
 
-    function completarTarea(){
+    function completarTarea(indiceTareaAEliminar){
         alert('¡Tarea completada!');
+        let tareasFiltradas = tareas.filter((_, index) => indiceTareaAEliminar != index);
+        setTareas(tareasFiltradas);
     }
 
     // 2. Agregar el return con lo que queremos ver en pantalla

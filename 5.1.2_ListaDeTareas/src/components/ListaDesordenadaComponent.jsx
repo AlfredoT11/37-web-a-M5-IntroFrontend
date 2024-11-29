@@ -1,6 +1,6 @@
 import ElementoliComponent from './ElementoliComponent';
 
-export default function ListaDesordenadaComponent({accionElementoLi, tareas}) {
+export default function ListaDesordenadaComponent({ accionElementoLi, tareas }) {
 
     /*
     ['Lavar ropa', 'Limpiar cajas de arena', 'Cocinar']
@@ -12,8 +12,26 @@ export default function ListaDesordenadaComponent({accionElementoLi, tareas}) {
 
     return (
         <ul>
-            { /* La función map de abajo convierte el arreglo (de cadenas) tareas a un arreglo de elementoz <ElementliComponent> */ }
-            {tareas.map((tarea) => <ElementoliComponent textoTarea={tarea}></ElementoliComponent>)}
+            { /* La función map de abajo convierte el arreglo (de cadenas) tareas a un arreglo de elementoz <ElementliComponent> */}
+            {tareas.map((tarea, index) => <ElementoliComponent
+                key={index}
+                valorIndice={index}
+                textoTarea={tarea}
+                accionBoton={accionElementoLi}>
+            </ElementoliComponent>)}
         </ul>
     );
 }
+
+/*
+// Definición de la función.
+function suma(a, b){
+    return a+b;
+}
+
+// Referencia a la función.
+suma
+
+// Llamada a función
+suma(5, 2);
+*/
