@@ -38,6 +38,11 @@ function ListaDeTareasComponent({ titulo='Lista de tareas', ejecutarContador=tru
         setTareas(tareasFiltradas);
     }
 
+    function agregarTarea(nuevaTarea){
+        let tareasNuevas = [...tareas];
+        setTareas(tareasNuevas.push(nuevaTarea));
+    }
+
     // 2. Agregar el return con lo que queremos ver en pantalla
     return (
         <>

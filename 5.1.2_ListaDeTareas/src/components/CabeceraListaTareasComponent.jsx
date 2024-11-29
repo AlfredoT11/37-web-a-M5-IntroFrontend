@@ -4,7 +4,7 @@ function CabeceraListaTareasComponent({ titulo='Titulo provisional' }) {
         <>
             <h1>{titulo}</h1>
             <label>Tarea: </label><input type='text' />
-            <button>Agregar tarea</button>
+            <button onClick={agregarTarea}>Agregar tarea</button>
         </>
     );
 }
