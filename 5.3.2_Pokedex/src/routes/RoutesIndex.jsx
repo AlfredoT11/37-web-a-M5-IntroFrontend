@@ -9,7 +9,7 @@ function RoutesIndex(){
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/acercaDe' element={<AcercaDe />} />
-            <Route path='/pokemon/:nombrePokemon' element={<DetallePokemon />}></Route>
+            <Route path='/pokemon/:nombrePokemon/:id' element={<DetallePokemon />}></Route>
         </Routes>
     )
 
