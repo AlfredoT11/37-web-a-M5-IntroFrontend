@@ -26,7 +26,9 @@ function Home(){
       <>
         <h1>Pokédex Home</h1>
         <ul>
-          {pokemones.map((pokemon, index) => <li key={index}>{pokemon.name}</li>)}
+          {pokemones.map((pokemon, index) => {
+            return <li key={index}><NavLink to='/pokemon'>{pokemon.name}</NavLink></li>
+          })}
         </ul>
 
         <NavLink to='/acercaDe'>Acerca de...</NavLink>

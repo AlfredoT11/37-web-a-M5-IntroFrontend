@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import AcercaDe from '../pages/AcercaDe';
+import DetallePokemon from '../pages/DetallePokemon';
 
 function RoutesIndex(){
 
@@ -8,6 +9,7 @@ function RoutesIndex(){
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/acercaDe' element={<AcercaDe />} />
+            <Route path='/pokemon/:nombrePokemon' element={<DetallePokemon />}></Route>
         </Routes>
     )
 
