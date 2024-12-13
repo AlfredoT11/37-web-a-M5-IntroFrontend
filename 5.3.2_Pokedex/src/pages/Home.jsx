@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <>
-      <h1>Pokédex Home</h1>
+      <h1>Pokédex</h1>
       {pokemones.map((pokemon, index) => {
         return <PokemonCardComponent key={index} nombre={pokemon.name} id={pokemon.url.split('/')[6]}></PokemonCardComponent>
       })}
