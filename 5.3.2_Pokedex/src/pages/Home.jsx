@@ -24,11 +24,26 @@ function Home() {
     consultarPokemones();
   }, []);
 
+
+  /*
+
+    Cadena original -> "Hola a todos en la clase"
+    Separador -> " "
+    split()
+    ["Hola", "a", "todos", "en", "la", "clase"];
+
+    Cadena original -> https://pokeapi.co/api/v2/pokemon/153/
+    Separador -> /
+    split()
+     0          1             2      3     4          5      6
+    ["https:", "", "pokeapi.co", "api", "v2", "pokemon", "153"] 
+  */
+
   return (
     <>
       <h1>Pokédex Home</h1>
       {pokemones.map((pokemon, index) => {
-        return <PokemonCardComponent key={index} nombre={pokemon.name} id={32}></PokemonCardComponent>
+        return <PokemonCardComponent key={index} nombre={pokemon.name} id={pokemon.url.split('/')[6]}></PokemonCardComponent>
       })}
 
       <NavLink to='/acercaDe'>Acerca de...</NavLink>

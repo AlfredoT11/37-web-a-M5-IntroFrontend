@@ -15,7 +15,7 @@ function DetallePokemon() {
     return (
         <>
             <h1>{params.nombrePokemon}</h1>
-            <PokemonCardComponent nombre={params.nombrePokemon} id={32}></PokemonCardComponent>
+            <PokemonCardComponent nombre={params.nombrePokemon} id={params.id}></PokemonCardComponent>
         </>
     )
 }
